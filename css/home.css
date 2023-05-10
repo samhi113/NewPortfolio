@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
+
 :root {
     --near-black: "#222";
     --near-white: "#ddd";
@@ -6,22 +8,68 @@
 
 html {
     background-color: var(--near-white);
+
+    font-family: 'Space Grotesk', 'Cabin', sans-serif;
 }
 
 nav {
     background-color: var(--near-black);
-    display: inline;
+    height: 4vh;
+    max-height: 175px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+nav > div, nav > * > div {
+    width: 15vw;
+    max-width: 500px;
+
+    height: 4vh;
+    max-height: 175px;
+
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #siteLogo {
-    width: 10vw;
-    max-width: 500px;
+    width: 7vh;
+    height: 7vh;
 
-    background-image: image("https://i.postimg.cc/bN0shrJZ/light-OTFlogo.png");
+    background-color: var(--near-black);
+    background-image: url("https://i.postimg.cc/bN0shrJZ/light-OTFlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     transition: background-image 0.25s ease-in-out;
 }
 
-#siteLogo.hover {
-    background-image: image("https://i.postimg.cc/0QH77Qmk/otf-Brick-Red-Logo.png");
+#siteLogo:hover {
+    background-image: url("https://i.postimg.cc/0QH77Qmk/otf-Brick-Red-Logo.png");
+}
+
+.navButton {
+    background-image: linear-gradient(90deg, rgba(102,17,17,1) 0%, rgba(34,34,34,1) 30%, rgba(34,34,34,1) 100%);
+
+    font-family: 'Cabin';
+    font-weight: 400;
+    font-size: 2.5vh;
+
+    transition: background-image 0.25s ease-in-out, font-weight 0.25s ease-in-out;
+}
+
+.navButton:hover {
+    background-image: linear-gradient(90deg, rgba(102,17,17,1) 0%, rgba(102,17,17,1) 70%, rgba(34,34,34,1) 100%);
+    
+    font-weight: 700;
 }
