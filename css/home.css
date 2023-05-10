@@ -1,0 +1,27 @@
+:root {
+    --near-black: "#222";
+    --near-white: "#ddd";
+    --brick-red: "#611";
+}
+
+html {
+    background-color: var(--near-white);
+}
+
+nav {
+    background-color: var(--near-black);
+    display: inline;
+}
+
+#siteLogo {
+    width: 10vw;
+    max-width: 500px;
+
+    background-image: image("https://i.postimg.cc/bN0shrJZ/light-OTFlogo.png");
+
+    transition: background-image 0.25s ease-in-out;
+}
+
+#siteLogo.hover {
+    background-image: image("https://i.postimg.cc/0QH77Qmk/otf-Brick-Red-Logo.png");
+}
